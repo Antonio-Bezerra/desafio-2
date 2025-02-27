@@ -1,4 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 *{
     margin: 0;
     padding: 0;
+}
+
+:root{
+    --cor-primaria: #57534E;
+    --cor-secundaria: #292524;
+    --cor-terciaria: #22d4fd;
+    --cor-hover: #272727;
+
+    --fonte-primaria: "Poppins", sans-serif;
+}
+
+body{
+    box-sizing: border-box;
+    color: var(--cor-primaria);
+}
+
+#cabecalho{
+    margin: 4rem 4rem 1.5rem;
+}
+
+.cabecalho-menu{
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#cabecalho a{
+    color: var(--cor-primaria);
+    text-decoration: none;
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1rem;
+    display: flex;
+}
+
+#principal{
+    margin: 0 4rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.principal-formulario{
+    display: flex;
+    flex-direction: column;
+}
+
+.principal-formulario-titulo{
+    font-family: var(--fonte-primaria);
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--cor-secundaria);
+}
+
+.principal-formulario-texto-um{
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1rem;
+    margin-top: 8px;
+}
+
+.formulario-primeiro-bloco{
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.formulario-terceiro-bloco{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bloco-imagens{
+    background: #2135A6;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.bloco-imagens-dois{
+    background-color: #2135A6;
 }
