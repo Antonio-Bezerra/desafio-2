@@ -8,8 +8,8 @@
 :root{
     --cor-primaria: #57534E;
     --cor-secundaria: #292524;
-    --cor-terciaria: #22d4fd;
-    --cor-hover: #272727;
+    --cor-terciaria: #2135A6;
+    --cor-quaternaria: #D6D3D1;
 
     --fonte-primaria: "Poppins", sans-serif;
 }
@@ -19,36 +19,32 @@ body{
     color: var(--cor-primaria);
 }
 
-#cabecalho{
-    margin: 4rem 4rem 1.5rem;
-}
-
-.cabecalho-menu{
+.voltar{
     display: flex;
-    gap: 8px;
     justify-content: space-between;
-    flex-direction: column;
+    padding-bottom: 1.5rem;
 }
 
-#cabecalho a{
+.voltar a{
     color: var(--cor-primaria);
     text-decoration: none;
     font-family: var(--fonte-primaria);
     font-weight: 400;
     font-size: 1rem;
     display: flex;
+    gap: 8px;
 }
 
 #principal{
-    margin: 0 4rem 4rem;
     display: flex;
     justify-content: space-between;
-    gap: 24px;
+    gap: 8px;
 }
 
 .principal-formulario{
     display: flex;
     flex-direction: column;
+    margin: 64px 0 0 64px;
 }
 
 .principal-formulario-titulo{
@@ -72,19 +68,125 @@ body{
     gap: 24px;
 }
 
-.formulario-terceiro-bloco{
-    display: flex;
-    flex-wrap: wrap;
+.primeiro-bloco-texto{
+    font-family: var(--fonte-primaria);
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--cor-secundaria);
 }
 
-.bloco-imagens{
-    background: #2135A6;
-    width: 500px;
-    height: 500px;
+label {
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 14px;   
+}
+
+.formulario-primeiro-bloco input{
+    border: 1px solid;
+    border-radius: 8px;
+    color: var(--cor-quaternaria);
+    padding: 12px;
+    width: 528px;
+}
+
+.formulario-primeiro-bloco select{
+    border: 1px solid;
+    border-radius: 8px;
+    color: var(--cor-quaternaria);
+    padding: 12px;
+    width: 554px;
+    background-image: url("../imagens/seta-baixo.png");
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+.option{
+    color: var(--cor-secundaria);
+}
+
+.formulario-segundo-bloco{
+    padding-top: 48px;
     display: flex;
     flex-direction: column;
+    gap: 24px;
 }
 
-.bloco-imagens-dois{
-    background-color: #2135A6;
+.formulario-segundo-bloco p{
+    font-family: var(--fonte-primaria);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--cor-secundaria);
+}
+
+.formulario-segundo-bloco input{
+    border: 1px solid;
+    border-radius: 8px;
+    color: var(--cor-quaternaria);
+    padding: 12px;
+    width: 528px;
+}
+
+#rua, #cidade{
+    width: 300px;
+}
+
+#numero-casa, #estado{
+    width: 176px;
+}
+
+.formulario-segundo-bloco-metade{
+    box-sizing: border-box;
+    width: 560px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+#comprovante-residencia{
+    background-image: url("../imagens/nuvem.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 160px;
+    border: 1px dashed;
+    border-radius: 8px;
+    color: var(--cor-quaternaria);
+}
+
+.formulario-terceiro-bloco > *{
+    border: 1px solid var(--cor-quaternaria);
+    border-radius: 8px;
+    width: 267px;
+    height: 120px;
+}
+
+
+
+.formulario-terceiro-bloco{
+    box-sizing: border-box;
+    width: 560px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.imagens-lateral{
+    background-color: var(--cor-terciaria);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagens-lateral-um{
+    padding-top: 140px;
+    padding-bottom: 71px;
+    padding-left: 56px;
+    padding-right: 68px;
+    width: 500px;
+    height: 500px;
+}
+
+.imagens-lateral-dois{
+    padding-bottom: 95px;
+    width: 212.25px;
+    height: 26.49px;
 }
