@@ -38,7 +38,7 @@ body{
 #principal{
     display: flex;
     justify-content: space-between;
-    gap: 8px;
+    gap: 64px;
 }
 
 .principal-formulario{
@@ -104,6 +104,39 @@ label {
     color: var(--cor-secundaria);
 }
 
+.texto-identidade{
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--cor-primaria);
+}
+
+.file-identidade{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px dashed var(--cor-quaternaria);
+    border-radius: 8px;
+    width: 550px;
+    height: 160px;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    font-family: var(--fonte-primaria);
+    font-size: 16px;
+    color: #A8A29E;
+}
+
+.file-identidade input{
+    opacity: 0;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
 .formulario-segundo-bloco{
     padding-top: 48px;
     display: flex;
@@ -111,7 +144,7 @@ label {
     gap: 24px;
 }
 
-.formulario-segundo-bloco p{
+.sugundo-bloco-texto{
     font-family: var(--fonte-primaria);
     font-weight: 600;
     font-size: 16px;
@@ -142,14 +175,37 @@ label {
     gap: 24px;
 }
 
-#comprovante-residencia{
-    background-image: url("../imagens/nuvem.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 160px;
-    border: 1px dashed;
+.texto-residencia{
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--cor-primaria);
+}
+
+.file-residencia{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px dashed var(--cor-quaternaria);
     border-radius: 8px;
-    color: var(--cor-quaternaria);
+    width: 550px;
+    height: 160px;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    font-family: var(--fonte-primaria);
+    font-size: 16px;
+    color: #A8A29E;
+}
+
+.file-residencia input{
+    opacity: 0;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
 }
 
 .formulario-terceiro-bloco > *{
@@ -158,8 +214,6 @@ label {
     width: 267px;
     height: 120px;
 }
-
-
 
 .formulario-terceiro-bloco{
     box-sizing: border-box;
