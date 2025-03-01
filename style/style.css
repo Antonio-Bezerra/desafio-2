@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@400;600&display=swap');
 
 *{
     margin: 0;
@@ -10,8 +10,11 @@
     --cor-secundaria: #292524;
     --cor-terciaria: #2135A6;
     --cor-quaternaria: #D6D3D1;
+    --cor-quinta: #000000;
+    --cor-sexta: #E43A12;
 
     --fonte-primaria: "Poppins", sans-serif;
+    --fonte-secundaria: "Montserrat", sans-serif;
 }
 
 body{
@@ -87,6 +90,12 @@ label {
     color: var(--cor-quaternaria);
     padding: 12px;
     width: 528px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .formulario-primeiro-bloco select{
@@ -208,6 +217,23 @@ label {
     cursor: pointer;
 }
 
+.trilha-apredizagem-subtilulo{
+    font-family: var(--fonte-primaria);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--cor-secundaria);
+    padding-top: 48px;
+    padding-bottom: 24px;
+}
+
+.trilha-apredizagem-texto{
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--cor-primaria);
+    padding-bottom: 16px;
+}
+
 .formulario-terceiro-bloco > *{
     border: 1px solid var(--cor-quaternaria);
     border-radius: 8px;
@@ -221,6 +247,100 @@ label {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
+}
+
+.trilha-front-end{
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--cor-secundaria);
+}
+
+.trilha-front-end input{
+    display: flex;
+    margin-left: 8px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+.trilha-back-end{
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--cor-secundaria);
+}
+
+.trilha-back-end input{
+    display: flex;
+    margin-left: 8px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+.trilha-jogos{
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--cor-secundaria);
+}
+
+.trilha-jogos input{
+    display: flex;
+    margin-left: 8px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+.trilha-design{
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--cor-secundaria);
+}
+
+.trilha-design input{
+    display: flex;
+    margin-left: 8px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+.trilha-dados{
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--cor-secundaria);
+}
+
+.trilha-dados input{
+    display: flex;
+    margin-left: 8px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+.termo-politica{
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--cor-quinta);
+    padding: 48px 0;
+    width: 528px;
+    align-items: baseline;
+}
+
+.termo-politica strong{
+    font-family: var(--fonte-primaria);
+    font-weight: 500;
+    color: var(--cor-sexta);
 }
 
 .imagens-lateral{
@@ -243,4 +363,35 @@ label {
     padding-bottom: 95px;
     width: 212.25px;
     height: 26.49px;
+}
+
+.botao-final{
+    display: flex;
+    justify-content: flex-end;
+    width: 545px;
+    gap: 16px;
+    margin-bottom: 64px;
+
+}
+
+.fazer-inscricao{
+    background-color: #E43A12;
+    padding: 12px 24px;
+    font-family: var(--fonte-primaria);
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 8px;
+    color: #ffffff;
+    border: 1px solid #E43A12;
+}
+
+.cancelar{
+    padding: 12px 24px;
+    font-family: var(--fonte-primaria);
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #E43A12;
+    background-color: #ffffff;
+    color: #E43A12;
 }

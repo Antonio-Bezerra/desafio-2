@@ -107,51 +107,55 @@
                     </div>
                 </div>
 
-                <br>
-                <div>
-                    <p><strong>Trilhas de aprendizagem</strong></p>
-                    <p>Selecione apenas uma trilha</p>
-                </div>
+                <p class="trilha-apredizagem-subtilulo">Trilhas de aprendizagem</p>
+
+                <p class="trilha-apredizagem-texto">Selecione apenas uma trilha</p>
 
                 <div class="formulario-terceiro-bloco">
 
-                    <div>
+                    <div class="trilha-front-end">
+                        <input type="radio" id="front-end" name="trilha" checked="checked">
+                        <img src="./imagens/front-end.png"><br>
                         <label for="front-end">Programação Front-end</label>
-                        <input type="radio" id="front-end" value="Programação Front-end" name="front-end" checked="checked">
                     </div>
 
-                    <div>
+                    <div class="trilha-back-end">
+                        <input type="radio" id="back-end" name="trilha">
+                        <img src="./imagens/back-end.png"><br>
                         <label for="back-end">Programação Back-end</label>
-                        <input type="radio" id="back-end" value="Programação Back-end" name="back-end">
                     </div>
 
-                    <div>
+                    <div class="trilha-jogos">
+                        <input type="radio" id="jogos" name="trilha">
+                        <img src="./imagens/jogos.png"><br>
                         <label for="jogos">Programação de Jogos</label>
-                        <input type="radio" id="jogos" value="Programação de Jogos" name="jogos">
                     </div>
 
-                    <div>
+                    <div class="trilha-design">
+                        <input type="radio" id="design" name="trilha">
+                        <img src="./imagens/ux.png"><br>
                         <label for="design">Design e Experiência</label>
-                        <input type="radio" id="design" value="Design e Experiência" name="design">
                     </div>
 
-                    <div>
+                    <div class="trilha-dados">
+                        <input type="radio" id="dados" name="trilha">
+                        <img src="./imagens/dados.png"><br>
                         <label for="dados">Ciência de Dados</label>
-                        <input type="radio" id="dados" value="Ciência de Dados" name="dados">
                     </div>
 
                 </div>
 
                 <br>
 
-                <label for="termo">
-					<input class="termo" type="checkbox" name="termo" id="termo" value="Declaro que li e concordo">Declaro que li e concordo com os <strong>Termos e Condições</strong> e com a <strong>Política de Privacidade.</strong> 
-				</label>
+                <div class="termo-politica">
+                    <input class="termo" type="checkbox" name="termo" id="termo">
+                    <label for="termo">Declaro que li e concordo com os <strong>Termos e Condições</strong> e com a <strong>Política de Privacidade.</strong></label>
+                </div>
 
-                <br>
-
-                <input type="reset" value="Cancelar">
-                <input type="submit" value="Fazer inscrição">
+                <div class="botao-final">
+                    <input class="cancelar" type="reset" value="Cancelar">
+                    <input class="fazer-inscricao" type="submit" value="Fazer inscrição">
+                </div>
                 
 
             </form>
