@@ -12,7 +12,7 @@
     <main id="principal">
         <section class="principal-formulario">
             <div class="voltar">
-                <a href="inscreva-se.html"> <img src="./imagens/seta.png"> Voltar</a>
+                <a href="index.html"> <img src="./imagens/seta.png"> Voltar</a>
             </div>
             <h2 class="principal-formulario-titulo">Formulário de inscrição</h2>
             <p class="principal-formulario-texto-um">Preencha os dados abaixo para fazer sua inscrição no Programa Trilhas.</p>
@@ -41,6 +41,7 @@
                     <div>
                         <label for="sexo">Sexo</label><br>
                         <select id="sexo" name="sexo">
+                            <option selected disabled value="">Selecione</option>
                             <option class="option" value="Masculino">Masculino</option>
                             <option class="option" value="Femenino">Feminino</option>
                         </select>
@@ -71,8 +72,8 @@
                     <p class="sugundo-bloco-texto">Endereço residencial</p>
 
                     <div>
-                        <label for="numero-cep">CEP</label><br>
-                        <input type="number" name="numero-cep" id="numero-cep">
+                        <label for="cep">CEP</label><br>
+                        <input type="number" name="numero-cep" id="cep" onblur="buscarCep(this.value)">
                     </div>
 
                     <div class="formulario-segundo-bloco-metade">
@@ -114,31 +115,31 @@
                 <div class="formulario-terceiro-bloco">
 
                     <div class="trilha-front-end">
-                        <input type="radio" id="front-end" name="trilha" checked="checked">
+                        <input class="radio" type="radio" id="front-end" name="trilha" checked="checked">
                         <img src="./imagens/front-end.png"><br>
                         <label for="front-end">Programação Front-end</label>
                     </div>
 
                     <div class="trilha-back-end">
-                        <input type="radio" id="back-end" name="trilha">
+                        <input class="radio" type="radio" id="back-end" name="trilha">
                         <img src="./imagens/back-end.png"><br>
                         <label for="back-end">Programação Back-end</label>
                     </div>
 
                     <div class="trilha-jogos">
-                        <input type="radio" id="jogos" name="trilha">
+                        <input class="radio" type="radio" id="jogos" name="trilha">
                         <img src="./imagens/jogos.png"><br>
                         <label for="jogos">Programação de Jogos</label>
                     </div>
 
                     <div class="trilha-design">
-                        <input type="radio" id="design" name="trilha">
+                        <input class="radio" type="radio" id="design" name="trilha">
                         <img src="./imagens/ux.png"><br>
                         <label for="design">Design e Experiência</label>
                     </div>
 
                     <div class="trilha-dados">
-                        <input type="radio" id="dados" name="trilha">
+                        <input class="radio" type="radio" id="dados" name="trilha">
                         <img src="./imagens/dados.png"><br>
                         <label for="dados">Ciência de Dados</label>
                     </div>
@@ -148,8 +149,10 @@
                 <br>
 
                 <div class="termo-politica">
-                    <input class="termo" type="checkbox" name="termo" id="termo">
-                    <label for="termo">Declaro que li e concordo com os <strong>Termos e Condições</strong> e com a <strong>Política de Privacidade.</strong></label>
+                    <input class="checkbox" type="checkbox" name="termo" id="termo">
+                    <label for="termo">
+                        Declaro que li e concordo com os <a href=""><strong>Termos e Condições</strong></a> e com a <a href=""><strong>Política de Privacidade.</strong></a>
+                    </label>
                 </div>
 
                 <div class="botao-final">
@@ -169,6 +172,8 @@
         </section>
 
     </main>
+
+    <script src="js/app.js"></script>
 
     <footer></footer>
     

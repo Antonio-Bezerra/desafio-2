@@ -12,6 +12,10 @@
     --cor-quaternaria: #D6D3D1;
     --cor-quinta: #000000;
     --cor-sexta: #E43A12;
+    --cor-setima: #F67841;
+    --cor-oitava: #F3541C;
+    --cor-nona: #A8A29E;
+    --cor-decima: #FFFFFF;
 
     --fonte-primaria: "Poppins", sans-serif;
     --fonte-secundaria: "Montserrat", sans-serif;
@@ -85,23 +89,28 @@ label {
 }
 
 .formulario-primeiro-bloco input{
-    border: 1px solid;
+    border: 1px solid var(--cor-quaternaria);
     border-radius: 8px;
-    color: var(--cor-quaternaria);
+    color: var(--cor-quinta);
     padding: 12px;
     width: 528px;
 }
 
+.formulario-primeiro-bloco input:focus {
+    border: 2px solid var(--cor-setima) !important;
+    outline: none;
+}
+
 input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+input[type="number"]::-webkit-inner-spin-button, select {
+    -webkit-appearance: none !important;
     margin: 0;
 }
 
 .formulario-primeiro-bloco select{
-    border: 1px solid;
+    border: 1px solid var(--cor-quaternaria);
     border-radius: 8px;
-    color: var(--cor-quaternaria);
+    color: var(--cor-quinta);
     padding: 12px;
     width: 554px;
     background-image: url("../imagens/seta-baixo.png");
@@ -134,7 +143,7 @@ input[type="number"]::-webkit-inner-spin-button {
     align-items: center;
     font-family: var(--fonte-primaria);
     font-size: 16px;
-    color: #A8A29E;
+    color: var(--cor-nona);
 }
 
 .file-identidade input{
@@ -161,11 +170,16 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .formulario-segundo-bloco input{
-    border: 1px solid;
+    border: 1px solid var(--cor-quaternaria);
     border-radius: 8px;
-    color: var(--cor-quaternaria);
+    color: var(--cor-quinta);
     padding: 12px;
     width: 528px;
+}
+
+.formulario-segundo-bloco input:focus{
+    border: 1px solid var(--cor-setima);
+    outline: none;
 }
 
 #rua, #cidade{
@@ -205,7 +219,7 @@ input[type="number"]::-webkit-inner-spin-button {
     align-items: center;
     font-family: var(--fonte-primaria);
     font-size: 16px;
-    color: #A8A29E;
+    color: var(--cor-nona);
 }
 
 .file-residencia input{
@@ -249,7 +263,12 @@ input[type="number"]::-webkit-inner-spin-button {
     gap: 16px;
 }
 
-.trilha-front-end{
+.formulario-terceiro-bloco div:has(input:checked){
+    border: 2px solid var(--cor-oitava);
+    border-radius: 8px;
+}
+
+.trilha-front-end, .trilha-back-end, .trilha-jogos, .trilha-design, .trilha-dados{
     text-align: center;
     font-family: var(--fonte-secundaria);
     font-weight: 500;
@@ -257,71 +276,39 @@ input[type="number"]::-webkit-inner-spin-button {
     color: var(--cor-secundaria);
 }
 
-.trilha-front-end input{
+.radio{
     display: flex;
-    margin-left: 8px;
-    margin-top: 8px;
-    margin-bottom: 10px;
+    margin: 8px 0 10px 8px;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--cor-quaternaria);
+    border-radius: 50%;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    cursor: pointer;
 }
 
-.trilha-back-end{
-    text-align: center;
-    font-family: var(--fonte-secundaria);
-    font-weight: 500;
-    font-size: 16px;
-    color: var(--cor-secundaria);
-}
-
-.trilha-back-end input{
+.radio:before{
     display: flex;
-    margin-left: 8px;
-    margin-top: 8px;
-    margin-bottom: 10px;
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url('../imagens/check2.png');
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 600ms;
+    position: absolute;
 }
 
-.trilha-jogos{
-    text-align: center;
-    font-family: var(--fonte-secundaria);
-    font-weight: 500;
-    font-size: 16px;
-    color: var(--cor-secundaria);
-}
-
-.trilha-jogos input{
-    display: flex;
-    margin-left: 8px;
-    margin-top: 8px;
-    margin-bottom: 10px;
-}
-
-.trilha-design{
-    text-align: center;
-    font-family: var(--fonte-secundaria);
-    font-weight: 500;
-    font-size: 16px;
-    color: var(--cor-secundaria);
-}
-
-.trilha-design input{
-    display: flex;
-    margin-left: 8px;
-    margin-top: 8px;
-    margin-bottom: 10px;
-}
-
-.trilha-dados{
-    text-align: center;
-    font-family: var(--fonte-secundaria);
-    font-weight: 500;
-    font-size: 16px;
-    color: var(--cor-secundaria);
-}
-
-.trilha-dados input{
-    display: flex;
-    margin-left: 8px;
-    margin-top: 8px;
-    margin-bottom: 10px;
+.radio:checked:before{
+    opacity: 1;
 }
 
 .termo-politica{
@@ -334,13 +321,52 @@ input[type="number"]::-webkit-inner-spin-button {
     color: var(--cor-quinta);
     padding: 48px 0;
     width: 528px;
-    align-items: baseline;
 }
+
+.checkbox{
+    cursor: pointer;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--cor-nona);
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+}
+
+.checkbox:before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    opacity: 0;
+    position: absolute;
+    border-radius: 0;
+    border: 3px solid var(--cor-setima);
+    border-left: 0;
+    border-top: 0;
+    width: 5px;
+    height: 10px;
+    transform: rotate(45deg);
+    top: 1px;
+  }
+
+  .checkbox:checked:before{
+    opacity: 1;
+  }
 
 .termo-politica strong{
     font-family: var(--fonte-primaria);
     font-weight: 500;
     color: var(--cor-sexta);
+}
+
+.termo-politica a{
+    text-decoration: none;
 }
 
 .imagens-lateral{
@@ -351,8 +377,8 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .imagens-lateral-um{
-    padding-top: 140px;
-    padding-bottom: 71px;
+    padding-top: 110px;
+    padding-bottom: 50px;
     padding-left: 56px;
     padding-right: 68px;
     width: 500px;
@@ -360,7 +386,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .imagens-lateral-dois{
-    padding-bottom: 95px;
+    padding-bottom: 90px;
     width: 212.25px;
     height: 26.49px;
 }
@@ -375,14 +401,14 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .fazer-inscricao{
-    background-color: #E43A12;
+    background-color: var(--cor-sexta);
     padding: 12px 24px;
     font-family: var(--fonte-primaria);
     font-weight: 500;
     font-size: 16px;
     border-radius: 8px;
-    color: #ffffff;
-    border: 1px solid #E43A12;
+    color: var(--cor-decima);
+    border: 1px solid var(--cor-sexta);
 }
 
 .cancelar{
@@ -391,7 +417,7 @@ input[type="number"]::-webkit-inner-spin-button {
     font-weight: 500;
     font-size: 16px;
     border-radius: 8px;
-    border: 1px solid #E43A12;
-    background-color: #ffffff;
-    color: #E43A12;
+    border: 1px solid var(--cor-sexta);
+    background-color: var(--cor-decima);
+    color: var(--cor-sexta);
 }
