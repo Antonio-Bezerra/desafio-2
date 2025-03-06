@@ -374,10 +374,12 @@ input[type="number"]::-webkit-inner-spin-button, select {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: sticky;
+    top: 0;
 }
 
 .imagens-lateral-um{
-    padding-top: 110px;
+    padding-top: 105px;
     padding-bottom: 50px;
     padding-left: 56px;
     padding-right: 68px;
@@ -386,7 +388,7 @@ input[type="number"]::-webkit-inner-spin-button, select {
 }
 
 .imagens-lateral-dois{
-    padding-bottom: 90px;
+    padding-bottom: 80px;
     width: 212.25px;
     height: 26.49px;
 }
