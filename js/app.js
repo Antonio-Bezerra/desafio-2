@@ -105,3 +105,4 @@ function buscarCep(cep){
         estado.value = data.uf
     })
 }
+

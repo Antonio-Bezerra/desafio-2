@@ -34,8 +34,8 @@
                     </div>
 
                     <div>
-                        <label for="numero-CPF">CPF</label><br>
-                        <input type="number" name="numero-CPF" id="numero-CPF" required>
+                        <label for="cpf">CPF</label><br>
+                        <input type="text" name="cpf" id="cpf" required>
                     </div>
 
                     <div>
@@ -53,8 +53,8 @@
                     </div>
 
                     <div>
-                        <label for="numero-telefone">Telefone</label><br>
-                        <input type="number" name="numero-telefone" id="numero-telefone">
+                        <label for="phone">Telefone</label><br>
+                        <input type="text" name="phone" id="phone">
                     </div>
 
                     <div>
@@ -73,7 +73,7 @@
 
                     <div>
                         <label for="cep">CEP</label><br>
-                        <input type="number" name="numero-cep" id="cep" onblur="buscarCep(this.value)">
+                        <input type="text" name="cep" id="cep" onblur="buscarCep(this.value)">
                     </div>
 
                     <div class="formulario-segundo-bloco-metade">
@@ -173,8 +173,18 @@
 
     </main>
 
-    <script src="js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#cpf').mask('000.000.000-00');
+            $('#phone').mask('(00) 00000-0000');
+            $('#cep').mask('00000-000');
+        });
+    </script>
 
+    <script src="js/app.js"></script>
+    
     <footer></footer>
     
 </body>

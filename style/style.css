@@ -88,23 +88,20 @@ label {
     font-size: 14px;   
 }
 
-.formulario-primeiro-bloco input{
+.formulario-primeiro-bloco input, .formulario-segundo-bloco input, select{
     border: 1px solid var(--cor-quaternaria);
     border-radius: 8px;
-    color: var(--cor-quinta);
     padding: 12px;
     width: 528px;
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--cor-secundaria);
 }
 
 .formulario-primeiro-bloco input:focus {
     border: 2px solid var(--cor-setima) !important;
     outline: none;
-}
-
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button, select {
-    -webkit-appearance: none !important;
-    margin: 0;
 }
 
 .formulario-primeiro-bloco select{
@@ -116,6 +113,8 @@ input[type="number"]::-webkit-inner-spin-button, select {
     background-image: url("../imagens/seta-baixo.png");
     background-repeat: no-repeat;
     background-position: center right;
+    appearance: none !important;
+    cursor: pointer;
 }
 
 .option{
@@ -167,14 +166,6 @@ input[type="number"]::-webkit-inner-spin-button, select {
     font-weight: 600;
     font-size: 16px;
     color: var(--cor-secundaria);
-}
-
-.formulario-segundo-bloco input{
-    border: 1px solid var(--cor-quaternaria);
-    border-radius: 8px;
-    color: var(--cor-quinta);
-    padding: 12px;
-    width: 528px;
 }
 
 .formulario-segundo-bloco input:focus{
@@ -411,6 +402,7 @@ input[type="number"]::-webkit-inner-spin-button, select {
     border-radius: 8px;
     color: var(--cor-decima);
     border: 1px solid var(--cor-sexta);
+    cursor: pointer;
 }
 
 .cancelar{
@@ -422,4 +414,5 @@ input[type="number"]::-webkit-inner-spin-button, select {
     border: 1px solid var(--cor-sexta);
     background-color: var(--cor-decima);
     color: var(--cor-sexta);
+    cursor: pointer;
 }
