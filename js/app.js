@@ -1,14 +1,16 @@
 let form = document.getElementById("form");
 let nome = document.getElementById("nome");
 let data = document.getElementById("data");
-let cpf = document.getElementById("numero-CPF");
+let cpf = document.getElementById("cpf");
 let email = document.getElementById("email");
-let telefone = document.getElementById("numero-telefone");
-let cep = document.getElementById("numero-cep");
+let telefone = document.getElementById("phone");
+let cep = document.getElementById("cep");
 let rua = document.getElementById("rua");
 let numeroCasa = document.getElementById("numero-casa");
 let cidade = document.getElementById("cidade");
 let estado = document.getElementById("estado");
+let comprovanteDeIdentidade = document.getElementById("identidade");
+let comprovanteDeResidencia = document.getElementById("residencia");
 
 
 form.addEventListener("submit", (event) => {
@@ -20,12 +22,12 @@ form.addEventListener("submit", (event) => {
     }
 
     if(data.value ===""){
-        alert("Por favor , preencha com sua data de nascimento");
+        alert("Por favor, preencha com sua data de nascimento");
         return;
     }
 
     if (!validaDigitosCpf(cpf.value, 11)) {
-        alert("Por favor , preencha corretamente ,o CPF deve conter 11 dígitos.");
+        alert("Por favor, preencha corretamente, o CPF deve conter 11 dígitos.");
         return;
     }
 
@@ -57,17 +59,27 @@ form.addEventListener("submit", (event) => {
     }
 
     if(cidade.value === ""){
-        alert("Por favor , preencha com o nome da sua cidade");
+        alert("Por favor, preencha com o nome da sua cidade");
         return ; 
 
     }
 
     if(estado.value === ""){
-        alert("Por favor , preencha com o nome do seu estado (MA)");
+        alert("Por favor, preencha com o nome do seu estado (MA)");
         return;
     }
 
-    alert("Formulário de inscrição enviado!!!");
+    if(comprovanteDeIdentidade.value === ""){
+        alert("Por favor , anexe o documento de identidade");
+        return
+    }
+
+    if(comprovanteDeResidencia.value === ""){
+        alert("Por favor , anexe o comprovante de Residência ");
+        return ;
+    }
+
+    alert("Formulário de inscrição enviado!");
     
     form.submit();
    

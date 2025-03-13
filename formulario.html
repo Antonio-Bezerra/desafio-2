@@ -17,14 +17,14 @@
             <h2 class="principal-formulario-titulo">Formulário de inscrição</h2>
             <p class="principal-formulario-texto-um">Preencha os dados abaixo para fazer sua inscrição no Programa Trilhas.</p>
             
-            <form action="/action_page.php" method="post">
+            <form id="form" action="/action_page.php" method="post">
 
                 <div class="formulario-primeiro-bloco">
                     <p class="primeiro-bloco-texto"><strong>Informações do participante</strong></p>
 
                     <div>
                         <label for="nome">Nome completo</label><br>
-                        <input type="text" name="nome" id="nome" required>
+                        <input type="text" name="nome" id="nome">
                     </div>
                     
 
@@ -35,7 +35,7 @@
 
                     <div>
                         <label for="cpf">CPF</label><br>
-                        <input type="text" name="cpf" id="cpf" required>
+                        <input type="text" name="cpf" id="cpf">
                     </div>
 
                     <div>
@@ -49,7 +49,7 @@
 
                     <div>
                         <label for="email">E-mail</label><br>
-                        <input type="email" name="email" id="email" required>
+                        <input type="email" name="email" id="email">
                     </div>
 
                     <div>
@@ -62,7 +62,7 @@
                         <div class="file-identidade">
                             <img src="./imagens/nuvem2.png" width="48px" height="48px">
                             <p>Clique aqui para selecionar o arquivo</p>
-                            <input type="file" name="identidade" id="identidade" required>
+                            <input type="file" name="identidade" id="identidade">
                         </div>
                     </div>
 
@@ -103,7 +103,7 @@
                         <div class="file-residencia">
                             <img src="./imagens/nuvem2.png" width="48px" height="48px">
                             <p>Clique aqui para selecionar o arquivo</p>
-                            <input type="file" name="residencia" id="residencia" required>
+                            <input type="file" name="residencia" id="residencia">
                         </div>
                     </div>
                 </div>
@@ -149,7 +149,7 @@
                 <br>
 
                 <div class="termo-politica">
-                    <input class="checkbox" type="checkbox" name="termo" id="termo">
+                    <input class="checkbox" type="checkbox" name="termo" id="termo" required>
                     <label for="termo">
                         Declaro que li e concordo com os <a href=""><strong>Termos e Condições</strong></a> e com a <a href=""><strong>Política de Privacidade.</strong></a>
                     </label>
