@@ -416,3 +416,148 @@ label {
     color: var(--cor-sexta);
     cursor: pointer;
 }
+
+
+@media (max-width: 1200px) {
+    #principal { 
+        gap: 32px;
+        padding: 0 32px;
+    }
+    
+    .imagens-lateral-um {
+        width: 400px;
+        height: auto;
+        padding: 50px 30px;
+    }
+}
+
+@media (max-width: 992px){
+    .principal-formulario {
+        margin: 64px 32px 0;
+    }
+    
+    .formulario-primeiro-bloco input,
+    .formulario-segundo-bloco input,
+    select,
+    .file-identidade,
+    .file-residencia {
+        width: 100% !important;
+    }
+
+    .formulario-segundo-bloco-metade {
+        width: 100% !important;
+    }
+
+    #rua, #cidade, #numero-casa, #estado {
+        width: 100% !important;
+    }
+
+    .formulario-terceiro-bloco {
+        width: 100% !important;
+    }
+    
+    .termo-politica {
+        width: 100% !important;
+    }
+
+    .botao-final {
+        width: 100% !important;
+    }
+
+   
+    .imagens-lateral-um {
+        width: 300px;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    #principal {
+        flex-direction: column;
+        gap: 0;
+        padding: 0 16px;
+    }
+
+    .principal-formulario {
+        margin: 32px 0 0;
+    }
+
+    .principal-formulario-titulo {
+        font-size: 1.25rem;
+    }
+
+    .formulario-primeiro-bloco,
+    .formulario-segundo-bloco {
+        margin-top: 32px;
+    }
+
+    .formulario-terceiro-bloco > * {
+        width: 100% !important;
+    }
+
+    .imagens-lateral {
+        flex-direction: row;
+        justify-content: center;
+        gap: 40px;
+        background-color: transparent;
+    }
+
+    .imagens-lateral-um {
+        display: none;
+    }
+
+    .imagens-lateral-dois {
+        padding: 20px 0;
+    }
+
+    .botao-final {
+        flex-direction: column;
+        margin-bottom: 32px;
+    }
+
+    .cancelar, .fazer-inscricao {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.875rem;
+    }
+
+    .principal-formulario-titulo {
+        font-size: 1.1rem;
+    }
+
+    .principal-formulario-texto-um {
+        font-size: 0.9rem;
+    }
+
+    label, .texto-identidade, .texto-residencia {
+        font-size: 0.8125rem !important;
+    }
+
+    input, select {
+        font-size: 0.875rem !important;
+        padding: 10px !important;
+    }
+
+    .file-identidade, .file-residencia {
+        height: 120px !important;
+        font-size: 0.875rem !important;
+    }
+
+    .termo-politica {
+        font-size: 0.875rem !important;
+        padding: 32px 0 !important;
+    }
+    .trilha-front-end, 
+    .trilha-back-end, 
+    .trilha-jogos, 
+    .trilha-design, 
+    .trilha-dados {
+        font-size: 0.875rem !important;
+    }
+
+}
